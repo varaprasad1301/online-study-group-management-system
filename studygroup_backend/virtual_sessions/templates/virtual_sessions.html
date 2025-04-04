@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Sessions</title>
+</head>
+<body>
+    <h2>Upcoming Virtual Sessions</h2>
+    <ul>
+        {% for session in sessions %}
+        <li>
+            <h3>{{ session.title }}</h3>
+            <p>{{ session.description }}</p>
+            <p><strong>Scheduled Time:</strong> {{ session.scheduled_time }}</p>
+            {% if session.meeting_link %}
+                <a href="{{ session.meeting_link }}" target="_blank">
+                    <button>Join Session</button>
+                </a>
+            {% else %}
+                <p>No meeting link available</p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
