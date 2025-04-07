@@ -1,0 +1,15 @@
+<button onclick="getChatGPTHelp()">Need Help?</button>
+<div id="chatgpt-response"></div>
+
+<script>
+function getChatGPTHelp() {
+    fetch(`/quiz/{{ quiz.id }}/chatgpt-help/`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("chatgpt-response").innerText = data.reply;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+</script>
