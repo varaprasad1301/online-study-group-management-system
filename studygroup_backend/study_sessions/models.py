@@ -8,6 +8,7 @@ class StudySession(models.Model):
     participants = models.ManyToManyField(User, related_name="study_sessions")
     scheduled_time = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
+    
 
     def __str__(self):
         return self.title

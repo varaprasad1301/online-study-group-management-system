@@ -1,25 +1,26 @@
-<!-- studygroup_backend/templates/home.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Online Study Group Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f0f8ff, #d1e0e0);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
         header {
-            background-color: #007bff;
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
             color: white;
-            padding: 20px 0;
+            padding: 25px 0;
             text-align: center;
-            font-size: 1.5em;
+            font-size: 1.8em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         main {
@@ -28,42 +29,101 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
         }
 
         h1 {
             font-size: 2.5em;
             color: #333;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         p {
             font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 600px;
         }
 
         .btn {
-            padding: 12px 25px;
-            font-size: 1em;
+            padding: 15px 30px;
+            font-size: 1.1em;
             color: white;
-            background-color: #007bff;
+            background: linear-gradient(45deg, #007bff, #00c6ff);
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+            transition: transform 0.3s, background 0.3s;
         }
 
         .btn:hover {
-            background-color: #0056b3;
+            background: linear-gradient(45deg, #0056b3, #008cdd);
+            transform: translateY(-5px);
         }
 
         footer {
-            background-color: #e0e0e0;
-            padding: 10px 0;
+            background-color: #f8f9fa;
+            padding: 15px 0;
             text-align: center;
-            font-size: 0.9em;
-            color: #555;
+            font-size: 1em;
+            color: #888;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+                padding: 20px 10px;
+            }
+
+            main {
+                padding: 40px 15px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .btn {
+                font-size: 1em;
+                padding: 12px 24px;
+            }
+
+            footer {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
@@ -75,14 +135,12 @@
     <main>
         <h1>Online Study Group Management System</h1>
         <a href="/admin/" class="btn">Continue</a>
-        <br>
-        
-        <p>Powered by Synapse Tech — Connect, Collaborate, and Learn Together.</p>
-       
+        <p>Powered by <strong>Synapse Tech</strong> — Connect, Collaborate, and Learn Together.</p>
     </main>
 
     <footer>
-        &copy; 2025 Synapse Tech. All rights reserved.
+        &copy; 2025 Synapse Tech. All rights reserved. <br>
+        <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
     </footer>
 </body>
 </html>

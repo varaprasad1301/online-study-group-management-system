@@ -32,14 +32,20 @@ Including another URLconf
 from django.http import HttpResponse
 from django.urls import path, include
 from django.contrib import admin  # ✅ Add this line
+from django.shortcuts import render
+
+def home_redirect(request):
+    return render(request, "home.html")
 
 urlpatterns = [
-    
+    path("",home_redirect),
     path("admin/", admin.site.urls),
     path("api/study_groups/", include("study_groups.urls")),  # Replace "your_app" with your actual app name
+    path('', include('virtual_sessions.urls')),
     
 ]
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
